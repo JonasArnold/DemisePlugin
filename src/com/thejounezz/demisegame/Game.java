@@ -134,12 +134,12 @@ public class Game extends JavaPlugin
 			
 			switch(lowerCmd) 
 			{
-				case "deadpool":
-					statusInformer.InformDeadpoolStatus(this, ((Player) sender).getPlayer(), true);
+				case "demise":
+					statusInformer.InformGameStatus(this, ((Player) sender).getPlayer(), true);
 					
 					break;
 					
-				case "joindeadpool":
+				case "joindemise":
 					if(gameState.Get() != GameState.RUNNING)
 					{
 						player.sendMessage(ChatColor.GOLD + "You were added to the " + Globals.GameName + " Game");
@@ -154,7 +154,7 @@ public class Game extends JavaPlugin
 					
 					break;
 				
-				case "leavedeadpool":
+				case "leavedemise":
 					if(gameState.Get() != GameState.RUNNING)
 					{
 						player.sendMessage(ChatColor.GOLD + "You left the " + Globals.GameName + " Game!");
@@ -170,7 +170,7 @@ public class Game extends JavaPlugin
 					
 					break;
 								
-				case "startgame":
+				case "startdemise":
 					if(player.isOp())
 					{
 						// starts the game
@@ -183,7 +183,7 @@ public class Game extends JavaPlugin
 					}
 					break;
 					
-				case "stopgame":
+				case "stopdemise":
 					if(player.isOp())
 					{
 						// stops the game
@@ -196,7 +196,7 @@ public class Game extends JavaPlugin
 					}
 					break;
 				
-				case "resetgame":
+				case "resetdemise":
 					if(player.isOp())
 					{
 						if(gameState.Get() != GameState.RUNNING)
@@ -210,7 +210,7 @@ public class Game extends JavaPlugin
 								this.scoreboardHandler.ClearScoreboard(p);
 							}
 							
-							player.sendMessage("Dead Pool was reset.");
+							player.sendMessage(Globals.GameName + " Game was reset.");
 							return true; // end here => no new scoreboard
 						}
 						else

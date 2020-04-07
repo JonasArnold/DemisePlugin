@@ -22,7 +22,7 @@ public class MyListener implements Listener
 	public void onPlayerJoin(PlayerJoinEvent event)
 	{
 		// Send info about players
-		this.statusInformer.InformDeadpoolStatus(plugin, event.getPlayer(), false);
+		this.statusInformer.InformGameStatus(plugin, event.getPlayer(), false);
 		
 		// create sideboard
 		this.scoreboardHandler.GenerateNewScoreboard(event.getPlayer());

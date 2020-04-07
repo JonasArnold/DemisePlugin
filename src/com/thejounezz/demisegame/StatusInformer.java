@@ -13,7 +13,7 @@ public class StatusInformer
 		this.gameState = gameState;
 	}
 	
-	public void InformDeadpoolStatus(Game plugin, Player player, boolean listPlayers)
+	public void InformGameStatus(Game plugin, Player player, boolean listPlayers)
 	{
 		if(gameState.Get() == GameState.RUNNING)
 		{
