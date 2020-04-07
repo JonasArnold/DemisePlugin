@@ -7,15 +7,15 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class MyListener implements Listener 
 {
-	Main plugin;
+	Game plugin;
 	StatusInformer statusInformer;
-	ScoreboardHandler sideboardGenerator;
+	ScoreboardHandler scoreboardHandler;
 	
-	public MyListener(Main plugin, StatusInformer statusInformer, ScoreboardHandler sideboardGenerator)
+	public MyListener(Game plugin, StatusInformer statusInformer, ScoreboardHandler sideboardGenerator)
 	{
 		this.plugin = plugin;
 		this.statusInformer = statusInformer;
-		this.sideboardGenerator = sideboardGenerator;
+		this.scoreboardHandler = sideboardGenerator;
 	}
 	
 	@EventHandler
@@ -25,7 +25,7 @@ public class MyListener implements Listener
 		this.statusInformer.InformDeadpoolStatus(plugin, event.getPlayer(), false);
 		
 		// create sideboard
-		this.sideboardGenerator.GenerateNewScoreboard(event.getPlayer());
+		this.scoreboardHandler.GenerateNewScoreboard(event.getPlayer());
 	}
 	
 	@EventHandler

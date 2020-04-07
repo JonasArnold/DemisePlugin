@@ -2,9 +2,9 @@ package com.thejounezz.demisegame;
 
 public class GameStateHandler 
 {
-	Main plugin;
+	Game plugin;
 	
-	public GameStateHandler(Main plugin)
+	public GameStateHandler(Game plugin)
 	{
 		this.plugin = plugin;
 	}

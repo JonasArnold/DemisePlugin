@@ -30,3 +30,6 @@ A scoreboard is automatically generated to display the game state and the alive/
 |**/leaveDemise**|No| To leave the game (game must not be running).  |
 |**/startDemise**|Yes| Starts the game. |
 |**/stopDemise**|Yes| Stops the game. |
+|**/resetDemise**|Yes| Resets the game. Removes scoreboard and player prefixes. |
+
+The plugin was tested on Spigot and Paper Server.

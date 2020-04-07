@@ -13,15 +13,15 @@ public class StatusInformer
 		this.gameState = gameState;
 	}
 	
-	public void InformDeadpoolStatus(Main plugin, Player player, boolean listPlayers)
+	public void InformDeadpoolStatus(Game plugin, Player player, boolean listPlayers)
 	{
 		if(gameState.Get() == GameState.RUNNING)
 		{
-			player.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Deadpool Game is currently running!");
+			player.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + Globals.GameName + " Game is currently running!");
 		}
 		else
 		{
-			player.sendMessage(ChatColor.GOLD + "" + "Deadpool Game is currently not running.");
+			player.sendMessage(ChatColor.GOLD + Globals.GameName + " Game is currently not running.");
 		}
 		
 		// list players only when flag set

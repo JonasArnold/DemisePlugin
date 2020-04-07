@@ -1,22 +1,22 @@
-name: DeadpoolGame
-main: com.server.deadpoolgame.Main
-version: 1.0 (alpha)
+name: DemisePlugin
+main: com.thejounezz.demisegame.Game
+version: 1.0
 commands:
-    deadpool:
+    demise:
       description: Gives a status of the game.
       usage: /<command>         
-    joinDeadPool:
+    joinDemise:
       description: Join the game.
       usage: /<command>
-    leaveDeadPool:
+    leaveDemise:
       description: Leave the game.
       usage: /<command>
-    startGame:
-      description: OP only, Sets the DeadPool Game State to "Running".
+    startDemise:
+      description: OP only, Sets the game state to "Running".
       usage: /<command>
-    stopGame:
-      description: OP only, Sets the DeadPool Game State to "Not Running".
+    stopDemise:
+      description: OP only, Sets the game state to "Not Running".
       usage: /<command>
-    resetGame:
+    resetDemise:
       description: OP only, Resets the game.
       usage: /<command>

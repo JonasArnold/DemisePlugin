@@ -12,14 +12,12 @@ import net.md_5.bungee.api.ChatColor;
 
 public class ScoreboardHandler 
 {
-	Main plugin;
+	Game plugin;
 	GameStateHandler gameState;
 	Scoreboard b;
-	String teamDead = "Dead";
-	String teamAlive = "Alive";
-	String objectiveName = "DeadPoolGame";
+	String objectiveName = Globals.GameName + "Game";
 	
-	public ScoreboardHandler(Main plugin, GameStateHandler gameState)
+	public ScoreboardHandler(Game plugin, GameStateHandler gameState)
 	{
 		this.plugin = plugin;
 		this.gameState = gameState;
@@ -39,9 +37,9 @@ public class ScoreboardHandler
 		b = m.getNewScoreboard();
 		
 		@SuppressWarnings("deprecation")
-		Objective o = b.registerNewObjective("DeadPoolGame", "");
+		Objective o = b.registerNewObjective(objectiveName, "");
 		o.setDisplaySlot(DisplaySlot.SIDEBAR);
-		o.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Dead Pool Game");	
+		o.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + Globals.GameName + " Game");	
 		
 		// Bottom up lines
 		int i = 0;
@@ -118,15 +116,15 @@ public class ScoreboardHandler
 	
 	private void CreateTeams() 
 	{
-		if(this.b.getTeam(teamAlive) == null)
+		if(this.b.getTeam(Globals.TeamAliveName) == null)
 		{		
-			this.b.registerNewTeam(teamAlive);
-			Bukkit.getLogger().info("Team " + teamAlive + " was created");
+			this.b.registerNewTeam(Globals.TeamAliveName);
+			Bukkit.getLogger().info("Team " + Globals.TeamAliveName + " was created");
 		}
-		if(b.getTeam(teamDead) == null)
+		if(b.getTeam(Globals.TeamDeadName) == null)
 		{
-			this.b.registerNewTeam(teamDead);
-			Bukkit.getLogger().info("Team " + teamDead + " was created");
+			this.b.registerNewTeam(Globals.TeamDeadName);
+			Bukkit.getLogger().info("Team " + Globals.TeamDeadName + " was created");
 		}
 	}
 	
