@@ -1,4 +1,4 @@
-package com.server.deadpoolgame;
+package com.thejounezz.demisegame;
 
 public class GameStateHandler 
 {

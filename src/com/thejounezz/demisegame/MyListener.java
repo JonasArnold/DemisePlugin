@@ -1,4 +1,4 @@
-package com.server.deadpoolgame;
+package com.thejounezz.demisegame;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

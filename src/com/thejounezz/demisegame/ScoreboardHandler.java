@@ -1,4 +1,4 @@
-package com.server.deadpoolgame;
+package com.thejounezz.demisegame;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
