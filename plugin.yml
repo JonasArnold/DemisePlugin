@@ -1,0 +1,22 @@
+name: DeadpoolGame
+main: com.server.deadpoolgame.Main
+version: 1.0 (alpha)
+commands:
+    deadpool:
+      description: Gives a status of the game.
+      usage: /<command>         
+    joinDeadPool:
+      description: Join the game.
+      usage: /<command>
+    leaveDeadPool:
+      description: Leave the game.
+      usage: /<command>
+    startGame:
+      description: OP only, Sets the DeadPool Game State to "Running".
+      usage: /<command>
+    stopGame:
+      description: OP only, Sets the DeadPool Game State to "Not Running".
+      usage: /<command>
+    resetGame:
+      description: OP only, Resets the game.
+      usage: /<command>
